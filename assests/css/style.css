@@ -7,11 +7,12 @@
 }
 
 :root {
-  --background: #0d1117;
+  --background: #161b22;
   --panel: #0d1117;
   --primariy-text: #c9d1d9;
   --secondary-text: #8b949e;
   --links: #58a6ff;
+  --accent: #238636;
   --borders: #30363d;
   --main-font: "Roboto Mono", monospace;
 }
@@ -49,8 +50,9 @@ main > section.search {
   margin: 20px auto;
   gap: 10px;
   padding: 10px;
+  background-color: var(--panel);
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(249, 250, 250, 0.41);
+  box-shadow: 0 0 5px rgba(1, 4, 9, 0.6);
   border: 2px solid var(--borders);
 }
 
@@ -97,7 +99,8 @@ main > section.div-card {
   border: 2px solid var(--borders);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(249, 250, 250, 0.41);
+  background-color: var(--panel);
+  box-shadow: 0 0 5px rgba(1, 4, 9, 0.6);
   display: flex;
   gap: 20px;
 }
@@ -124,11 +127,20 @@ main > section.div-card > .div-card-info {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 hr {
   margin: 10px 0;
+}
+
+main > section.div-card > .div-card-info > h3 {
+  font-size: 2rem;
+}
+
+main > section.div-card > .div-card-info > p {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 main > section.div-card > .div-card-info > div.statistics {
@@ -144,7 +156,7 @@ main > section.div-card > .div-card-info > div.statistics > h4 {
 }
 
 main > section.div-card > .div-card-info > div.statistics > h4 > span {
-  background-color: var(--panel);
+  background-color: var(--background);
   border: 1px solid var(--borders);
   display: flex;
   align-items: center;
@@ -156,6 +168,7 @@ main > section.div-card > .div-card-info > div.statistics > h4 > span {
 
 main > section.div-card > .div-card-info > .links-wrapper > h3 {
   margin: 10px 0;
+  font-weight: 500;
 }
 
 main > section.div-card > .div-card-info > .links-wrapper > ul {
