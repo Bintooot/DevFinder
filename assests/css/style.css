@@ -50,7 +50,7 @@ main > section.search {
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(249, 250, 250, 0.644);
+  box-shadow: 0 0 5px rgba(249, 250, 250, 0.41);
   border: 2px solid var(--borders);
 }
 
@@ -90,16 +90,14 @@ main > section.search > button:hover {
 }
 
 /* Dev card Section */
-
 main > section.div-card {
   width: 80%;
-  height: 414px;
   margin: 0 auto;
   color: var(--primariy-text);
   border: 2px solid var(--borders);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(249, 250, 250, 0.644);
+  box-shadow: 0 0 5px rgba(249, 250, 250, 0.41);
   display: flex;
   gap: 20px;
 }
@@ -156,11 +154,16 @@ main > section.div-card > .div-card-info > div.statistics > h4 > span {
   border-radius: 50%;
 }
 
+main > section.div-card > .div-card-info > .links-wrapper > h3 {
+  margin: 10px 0;
+}
+
 main > section.div-card > .div-card-info > .links-wrapper > ul {
   display: grid;
   padding: 20px 0;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
+  gap: 5px;
 }
 
 main > section.div-card > .div-card-info > .links-wrapper > ul > li {
