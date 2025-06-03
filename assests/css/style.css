@@ -1,0 +1,176 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background: #f6f8ff;
+  --panel: #ffffff;
+  --primariy-text: #2b3442;
+  --secondary-text: #4b6a9b;
+  --links: #4b6a9b;
+  --borders: #dce1e9;
+  --main-font: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: var(--background);
+}
+
+/* Header Section */
+
+header {
+  width: 100%;
+  height: 174px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--panel);
+  border-bottom: 1px solid var(--borders);
+  box-shadow: 0 0 10px var(--borders);
+}
+
+header > h1 {
+  font-size: 6rem;
+  letter-spacing: 10px;
+  font-family: var(--main-font);
+  color: var(--primariy-text);
+}
+
+/* Search Bar Section */
+
+main > section.search {
+  width: 80%;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(43, 52, 66, 0.32);
+  border: 2px solid var(--borders);
+}
+
+main > section.search > span {
+  font-size: 1.5rem;
+  padding: 2px;
+  border-right: 2px solid var(--borders);
+}
+
+main > section.search > input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  color: var(--secondary-text);
+}
+
+main > section.search > input:focus {
+  outline: none;
+}
+
+main > section.search > button {
+  padding: 10px 15px;
+  border: 2px solid var(--borders);
+  cursor: pointer;
+  color: var(--secondary-text);
+  background-color: var(--primariy-text);
+  color: var(--background);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+main > section.search > button:hover {
+  background-color: #3f4f67;
+}
+
+/* Dev card Section */
+
+main > section.div-card {
+  width: 80%;
+  height: 414px;
+  margin: 0 auto;
+  border: 2px solid var(--borders);
+  box-shadow: 0 5px 10px rgba(43, 52, 66, 0.32);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+main > section.div-card > .img-wrapper {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > section.div-card > .img-wrapper > img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid var(--borders);
+  background-color: #d2d2d2;
+  border-radius: 50%;
+}
+
+main > section.div-card > .div-card-info {
+  flex: 1;
+  font-family: var(--main-font);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+main > section.div-card > .div-card-info > div.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main > section.div-card > .div-card-info > div.statistics > h4 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+main > section.div-card > .div-card-info > div.statistics > h4 > span {
+  background-color: var(--panel);
+  border: 1px solid var(--borders);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+main > section.div-card > .div-card-info > .links-wrapper > ul {
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+main > section.div-card > .div-card-info > .links-wrapper > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main > section.div-card > .div-card-info > .links-wrapper > ul > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+main > section.div-card > .div-card-info > .links-wrapper > ul > li:hover {
+  text-decoration: underline;
+}
