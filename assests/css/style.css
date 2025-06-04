@@ -138,6 +138,10 @@ main > section.div-card > .div-card-info > h3 {
   font-size: 2rem;
 }
 
+main > section.div-card > .div-card-info > p.joined {
+  font-size: 1rem;
+}
+
 main > section.div-card > .div-card-info > p {
   font-size: 1.2rem;
   font-weight: 300;

@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
@@ -18,10 +19,12 @@
     <title>DevFinder</title>
   </head>
   <body>
+    <script src="/api/fetch.js"></script>
     <header>
       <h1>DevFinder</h1>
     </header>
     <main>
+      <section id="error"></section>
       <section class="search">
         <span>🔍</span>
         <input
@@ -29,48 +32,44 @@
           id="search"
           placeholder="Search GitHub username... "
         />
-        <button>Search</button>
+        <button onclick="fetchGithubUser()">Search</button>
       </section>
       <section class="div-card">
         <div class="img-wrapper">
-          <img src="./assests/images/photo.jpg" alt="" />
+          <img src="./assests/images/avatar.jpg" id="avatar" alt="" />
         </div>
         <div class="div-card-info">
-          <h3>Ben Aniasco</h3>
-          <p>Bintooot18</p>
-          <p>Front-End Web Developer</p>
-          <p class="year">2021 - 2025</p>
+          <h3 class="name" id="name"></h3>
+          <p class="username" id="username"></p>
+          <p class="bio" id="bio"></p>
+          <p class="joined" id="joined"></p>
+          <p class="location" id="location-link"></p>
+
           <div class="links-wrapper">
             <h3>Links:</h3>
             <ul>
               <li>
                 <span
-                  ><img
-                    src="./assests/images/Reddit.svg"
-                    alt="logo.svg" /></span
-                ><a href="#">u/Bintot0998</a>
+                  ><img src="./assests/images/GitHub.svg" alt="logo"
+                /></span>
+                <a id="github-link" href="#" target="_blank"></a>
               </li>
               <li>
-                <span
-                  ><img
-                    src="./assests/images/Facebook.svg"
-                    alt="logo.svg" /></span
-                ><a href="#">u/Bintot0998</a>
+                <span><img src="./assests/images/web.svg" alt="logo" /></span>
+                <a id="blog-link" href="#" target="_blank"></a>
               </li>
               <li>
-                <span
-                  ><img
-                    src="./assests/images/LinkedIn.svg"
-                    alt="logo.svg" /></span
-                ><a href="#">u/Bintot0998</a>
+                <span><img src="./assests/images/mail.svg" alt="logo" /></span>
+                <a id="email" href="#" target="_blank"></a>
               </li>
             </ul>
           </div>
+
           <hr />
           <div class="statistics">
-            <h4>Repositories <span>8</span></h4>
-            <h4>Following <span>14</span></h4>
-            <h4>Followers <span>7</span></h4>
+            <h4>Repositories <span id="repos">0</span></h4>
+            <h4>Following <span id="following">0</span></h4>
+            <h4>Followers <span id="followers">0</span></h4>
           </div>
         </div>
       </section>
