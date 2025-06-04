@@ -24,7 +24,6 @@
       <h1>DevFinder</h1>
     </header>
     <main>
-      <section id="error"></section>
       <section class="search">
         <span>🔍</span>
         <input
@@ -34,7 +33,11 @@
         />
         <button onclick="fetchGithubUser()">Search</button>
       </section>
-      <section class="div-card">
+      <section class="hidden" id="error">
+        No developer found. <br />
+        <span class="note">Note: Make sure the spelling is correct.</span>
+      </section>
+      <section class="hidden" id="div-card">
         <div class="img-wrapper">
           <img src="./assests/images/avatar.jpg" id="avatar" alt="" />
         </div>

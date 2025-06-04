@@ -92,7 +92,27 @@ main > section.search > button:hover {
 }
 
 /* Dev card Section */
-main > section.div-card {
+.hidden {
+  display: none !important;
+}
+
+#error {
+  color: var(--primariy-text);
+  font-family: var(--main-font);
+  font-size: 2rem;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#error > span {
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+main > section#div-card {
   width: 80%;
   margin: 0 auto;
   color: var(--primariy-text);
@@ -105,14 +125,14 @@ main > section.div-card {
   gap: 20px;
 }
 
-main > section.div-card > .img-wrapper {
+main > section#div-card > .img-wrapper {
   width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-main > section.div-card > .img-wrapper > img {
+main > section#div-card > .img-wrapper > img {
   width: 300px;
   height: 300px;
   border: 2px solid var(--borders);
@@ -121,12 +141,13 @@ main > section.div-card > .img-wrapper > img {
   border-radius: 50%;
 }
 
-main > section.div-card > .div-card-info {
+main > section#div-card > .div-card-info {
   flex: 1;
   font-family: var(--main-font);
   padding: 20px;
   display: flex;
   flex-direction: column;
+
   gap: 5px;
 }
 
@@ -134,17 +155,17 @@ hr {
   margin: 10px 0;
 }
 
-main > section.div-card > .div-card-info > .name-wrapper > h3 {
+main > section#div-card > .div-card-info > .name-wrapper > h3 {
   font-size: 2rem;
 }
 
-main > section.div-card > .div-card-info > .name-wrapper {
+main > section#div-card > .div-card-info > .name-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main > section.div-card > .div-card-info > .name-wrapper > p.joined {
+main > section#div-card > .div-card-info > .name-wrapper > p.joined {
   font-size: 0.9rem;
 }
 
@@ -153,23 +174,23 @@ main > section.div-card > .div-card-info > .name-wrapper > p.joined {
   font-weight: 300;
 }
 
-main > section.div-card > .div-card-info > p.year {
+main > section#div-card > .div-card-info > p.year {
   font-size: 0.9rem;
 }
 
-main > section.div-card > .div-card-info > div.statistics {
+main > section#div-card > .div-card-info > div.statistics {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-main > section.div-card > .div-card-info > div.statistics > h4 {
+main > section#div-card > .div-card-info > div.statistics > h4 {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-main > section.div-card > .div-card-info > div.statistics > h4 > span {
+main > section#div-card > .div-card-info > div.statistics > h4 > span {
   background-color: var(--background);
   border: 1px solid var(--borders);
   display: flex;
@@ -180,12 +201,12 @@ main > section.div-card > .div-card-info > div.statistics > h4 > span {
   border-radius: 50%;
 }
 
-main > section.div-card > .div-card-info > .links-wrapper > h3 {
+main > section#div-card > .div-card-info > .links-wrapper > h3 {
   margin: 10px 0;
   font-weight: 500;
 }
 
-main > section.div-card > .div-card-info > .links-wrapper > ul {
+main > section#div-card > .div-card-info > .links-wrapper > ul {
   display: grid;
   padding: 10px 0;
   grid-template-columns: repeat(3, 1fr);
@@ -193,18 +214,18 @@ main > section.div-card > .div-card-info > .links-wrapper > ul {
   gap: 5px;
 }
 
-main > section.div-card > .div-card-info > .links-wrapper > ul > li {
+main > section#div-card > .div-card-info > .links-wrapper > ul > li {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-main > section.div-card > .div-card-info > .links-wrapper > ul > li > a {
+main > section#div-card > .div-card-info > .links-wrapper > ul > li > a {
   text-decoration: none;
   color: var(--links);
 }
 
-main > section.div-card > .div-card-info > .links-wrapper > ul > li:hover {
+main > section#div-card > .div-card-info > .links-wrapper > ul > li:hover {
   text-decoration: underline;
   color: var(--links);
 }

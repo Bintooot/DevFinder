@@ -1,11 +1,9 @@
 async function fetchGithubUser() {
   const usernameInput = document.getElementById("search");
-  const result = document.getElementById("error");
-
   const username = usernameInput.value.trim();
 
   if (!username) {
-    result.innerHTML = "Please enter username";
+    alert("Please enter username");
     return;
   }
 
@@ -13,12 +11,16 @@ async function fetchGithubUser() {
     const response = await fetch(`https://api.github.com/users/${username}`);
 
     if (!response.ok) {
-      alert("User not found");
+      document.getElementById("error").classList.remove("hidden");
+      document.getElementById("div-card").classList.add("hidden");
       return;
     }
 
     const data = await response.json();
     console.log(data);
+
+    document.getElementById("div-card").classList.remove("hidden");
+    document.getElementById("error").classList.add("hidden");
 
     // Personal Info //
     document.getElementById("avatar").src = data.avatar_url || "No Avatar";
