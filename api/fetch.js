@@ -45,9 +45,9 @@ async function fetchGithubUser() {
       : "No blog";
 
     document.getElementById("email-link").href = "#";
-    document.getElementById("email-link").textContent = data.mail || "No Email";
+    document.getElementById("email-link").textContent =
+      data.email || "No Email";
   } catch (error) {
     console.error("Fetch error:", error);
-    alert("An error occurred while fetching user data.");
   }
 }

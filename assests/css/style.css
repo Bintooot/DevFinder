@@ -134,15 +134,21 @@ hr {
   margin: 10px 0;
 }
 
-main > section.div-card > .div-card-info > h3 {
+main > section.div-card > .div-card-info > .name-wrapper > h3 {
   font-size: 2rem;
 }
 
-main > section.div-card > .div-card-info > p.joined {
-  font-size: 1rem;
+main > section.div-card > .div-card-info > .name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-main > section.div-card > .div-card-info > p {
+main > section.div-card > .div-card-info > .name-wrapper > p.joined {
+  font-size: 0.9rem;
+}
+
+.div-card-info > p {
   font-size: 1.2rem;
   font-weight: 300;
 }
@@ -181,7 +187,7 @@ main > section.div-card > .div-card-info > .links-wrapper > h3 {
 
 main > section.div-card > .div-card-info > .links-wrapper > ul {
   display: grid;
-  padding: 20px 0;
+  padding: 10px 0;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
   gap: 5px;
@@ -200,4 +206,5 @@ main > section.div-card > .div-card-info > .links-wrapper > ul > li > a {
 
 main > section.div-card > .div-card-info > .links-wrapper > ul > li:hover {
   text-decoration: underline;
+  color: var(--links);
 }
