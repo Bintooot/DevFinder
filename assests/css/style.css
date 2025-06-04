@@ -143,6 +143,10 @@ main > section.div-card > .div-card-info > p {
   font-weight: 300;
 }
 
+main > section.div-card > .div-card-info > p.year {
+  font-size: 0.9rem;
+}
+
 main > section.div-card > .div-card-info > div.statistics {
   display: flex;
   align-items: center;
