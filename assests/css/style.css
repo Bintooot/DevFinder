@@ -44,7 +44,6 @@ header > h1 {
 
 main > section.search {
   width: 80%;
-  height: 59px;
   display: flex;
   align-items: center;
   margin: 20px auto;
@@ -59,6 +58,7 @@ main > section.search {
 main > section.search > span {
   font-size: 1.5rem;
   padding: 2px;
+
   border-right: 2px solid var(--borders);
 }
 
@@ -72,7 +72,7 @@ main > section.search > input {
 }
 
 main > section.search > input:focus {
-  outline: none;
+  outline: var(--border);
 }
 
 main > section.search > button {
@@ -122,6 +122,8 @@ main > section#div-card {
   background-color: var(--panel);
   box-shadow: 0 0 5px rgba(1, 4, 9, 0.6);
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -141,13 +143,18 @@ main > section#div-card > .img-wrapper > img {
   border-radius: 50%;
 }
 
+main > section#div-card > .div-card-info > .links-wrapper > ul > li > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 main > section#div-card > .div-card-info {
   flex: 1;
   font-family: var(--main-font);
   padding: 20px;
   display: flex;
   flex-direction: column;
-
   gap: 5px;
 }
 
@@ -166,16 +173,12 @@ main > section#div-card > .div-card-info > .name-wrapper {
 }
 
 main > section#div-card > .div-card-info > .name-wrapper > p.joined {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .div-card-info > p {
   font-size: 1.2rem;
   font-weight: 300;
-}
-
-main > section#div-card > .div-card-info > p.year {
-  font-size: 0.9rem;
 }
 
 main > section#div-card > .div-card-info > div.statistics {
@@ -228,4 +231,137 @@ main > section#div-card > .div-card-info > .links-wrapper > ul > li > a {
 main > section#div-card > .div-card-info > .links-wrapper > ul > li:hover {
   text-decoration: underline;
   color: var(--links);
+}
+
+@media (max-width: 1275px) {
+  main > section#div-card > .img-wrapper > img {
+    width: 250px;
+    height: 250px;
+    transition: all 1s ease-in-out;
+  }
+  main > section#div-card > .div-card-info > .name-wrapper > h3 {
+    font-size: 1.5rem;
+    transition: all 1s ease-in-out;
+  }
+
+  .div-card-info > p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 1067px) {
+  main > section#div-card > .img-wrapper > img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 877px) {
+  header > h1 {
+    font-size: 5rem;
+    transition: all 1s ease-in-out;
+  }
+
+  main > section#div-card > .img-wrapper {
+    width: 100%;
+  }
+  main > section#div-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  main > section#div-card > .div-card-info > .name-wrapper {
+    flex-direction: column;
+  }
+  header > h1 {
+    font-size: 4rem;
+    transition: all 1s ease-in-out;
+  }
+
+  main > section#div-card > .div-card-info {
+    width: 100%;
+  }
+
+  main > section#div-card > .div-card-info > .links-wrapper > ul {
+    grid-template-columns: repeat(1, 1fr);
+    place-items: start;
+    gap: 10px;
+  }
+
+  main > section#div-card > .div-card-info > div.statistics {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  main > section#div-card > .div-card-info > div.statistics > h4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 465px) {
+  header > h1 {
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+  }
+
+  main > section.search {
+    flex-direction: column;
+  }
+
+  main > section.search > span {
+    display: none;
+  }
+
+  main > section.search > input {
+    width: 100%;
+  }
+
+  main > section.search > button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 415px) {
+  main > section#div-card > .div-card-info > .name-wrapper > h3 {
+    font-size: 1.3rem;
+  }
+
+  .div-card-info > p {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  main > section#div-card > .div-card-info > .name-wrapper > p.joined {
+    font-size: 0.8rem;
+  }
+
+  main > section#div-card > .div-card-info > .links-wrapper > h3 {
+    font-size: 1rem;
+  }
+
+  main
+    > section#div-card
+    > .div-card-info
+    > .links-wrapper
+    > ul
+    > li
+    > span
+    > img {
+    width: 20px;
+    height: 20px;
+  }
+  main > section#div-card > .div-card-info > .links-wrapper > ul > li > a {
+    font-size: 0.8rem;
+  }
+
+  main > section#div-card > .div-card-info > div.statistics > h4 {
+    font-size: 0.8rem;
+    width: 100%;
+  }
 }
