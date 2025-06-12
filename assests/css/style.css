@@ -114,7 +114,7 @@ main > section.search > button:hover {
 
 main > section#div-card {
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   color: var(--primariy-text);
   border: 2px solid var(--borders);
   padding: 10px;
@@ -306,6 +306,8 @@ main > section#div-card > .div-card-info > .links-wrapper > ul > li:hover {
 }
 
 @media (max-width: 465px) {
+
+
   header > h1 {
     font-size: 3rem;
     transition: all 1s ease-in-out;
@@ -334,14 +336,14 @@ main > section#div-card > .div-card-info > .links-wrapper > ul > li:hover {
 }
 
 @media (max-width: 415px) {
-  main > section#div-card > .div-card-info > .name-wrapper > h3 {
-    font-size: 1.3rem;
-  }
-
   .div-card-info > p {
     font-size: 0.8rem;
     font-weight: 300;
   }
+
+    header>h1 {
+      font-size: 2rem;
+    }
 
   main > section#div-card > .div-card-info > .name-wrapper > p.joined {
     font-size: 0.8rem;
