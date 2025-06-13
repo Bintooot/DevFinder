@@ -30,5 +30,5 @@
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/devfinder.git
+   git clone https://github.com/Bintooot/devfinder.git
    cd devfinder
