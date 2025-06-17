@@ -17,7 +17,7 @@ async function fetchGithubUser() {
     }
 
     const data = await response.json();
-    console.log(data);
+    console.table(data);
 
     document.getElementById("div-card").classList.remove("hidden");
     document.getElementById("error").classList.add("hidden");
@@ -28,6 +28,8 @@ async function fetchGithubUser() {
     document.getElementById("username").textContent =
       data.name || "No usernmae";
     document.getElementById("bio").textContent = data.bio || "No bio";
+    document.getElementById("location").textContent =
+      data.location || "No location";
     document.getElementById("joined").textContent = `Joined: ${new Date(
       data.created_at
     ).getFullYear()}`;
