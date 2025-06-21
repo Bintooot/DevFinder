@@ -1,4 +1,4 @@
-async function fetchGithubUser() {
+window.fetchGithubUser = async function fetchGithubUser() {
   const usernameInput = document.getElementById("search");
   const username = usernameInput.value.trim();
 
@@ -54,4 +54,4 @@ async function fetchGithubUser() {
   } catch (error) {
     console.error("Fetch error:", error);
   }
-}
+};
