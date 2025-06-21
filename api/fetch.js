@@ -1,4 +1,8 @@
-window.fetchGithubUser = async function fetchGithubUser() {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("button").addEventListener("click", fetchGithubUser);
+});
+
+async function fetchGithubUser() {
   const usernameInput = document.getElementById("search");
   const username = usernameInput.value.trim();
 
@@ -54,4 +58,4 @@ window.fetchGithubUser = async function fetchGithubUser() {
   } catch (error) {
     console.error("Fetch error:", error);
   }
-};
+}
